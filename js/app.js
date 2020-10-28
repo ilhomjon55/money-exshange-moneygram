@@ -1,11 +1,16 @@
-var formExchange = document.querySelector('.form-exchange');
-var currencyChoice = parseFloat(formExchange.querySelector('.currency_choice').value.trim(), 10);
-var inputExchange = parseFloat(formExchange.querySelector('.user-money').value.trim(), 10);
-var resultExchange = formExchange.querySelector('.result-money');
+var formExchangeBtn = document.querySelector('.form__btn');
 
-formExchange.addEventListener('submit', function (evt) {
+
+formExchange.addEventListener('click', function (evt) {
   evt.preventDefault();
 
+  var currencyChoice = document.querySelector('.form-select');
+  currencyChoice = parseFloat(currencyChoice.value.trim(), 10);
+
+  var inputExchange = document.querySelector('.user-money');
+  inputExchange = parseFloat(inputExchange.value.trim(), 10);
+
+  var resultExchange = formExchange.querySelector('.result-money');
 
   if (inputExchange > 0) {
     resultExchange.textContent = currencyChoice * inputExchange;
