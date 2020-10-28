@@ -10,7 +10,37 @@
 </head>
 
 <body>
-
+  <div class="container">
+    <header class="pt-3">
+      <a class="site-logo d-flex flex-column align-items-center  text-decoration-none" href="index.html">
+        <img class="mb-2" src="img/moneygram.svg" alt="img of moneygram" width="80" height="80">
+        <span class="logo-txt  font-weight-bold h5 text-danger">MoneyGram</span>
+      </a>
+    </header>
+    <main>
+      <form class="col-8 mx-auto row" action="https://echo.htmlacademy.ru/" method="GET">
+        <div class="form-group row col-12">
+          <label class="d-block w-100 " for="#user_money">Your money:</label>
+          <input type="number" class="user-money form-control col-md-9" id="user_money" name="user_money"
+            placeholder="Enter money" aria-label="Enter money" required>
+          <select class="form-control col-md-2  ml-md-auto" name="currency_choice" id="currency_choice">
+            <option value="currency_usd">USD</option>
+            <option value="currency_eur">EUR</option>
+            <option value="currency_rub">RUB</option>
+            <option value="currency_cny">CNY</option>
+          </select>
+        </div>
+        <button class="form__btn btn btn-danger mb-4">Convert</button>
+        <div class="form-group col-12 row">
+          <div class="alert alert-danger col-12 d-flex">
+            <span class="mr-2">Result:</span>
+            <span class="result-money font-italic">0</span>
+            <span class="font-weight-bold ml-2">SUM</span>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
