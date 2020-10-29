@@ -1,8 +1,5 @@
 var formExchange = document.querySelector('.form-exchange');
-
-
-
-formExchange.addEventListener('submit', function (evt) {
+var convertMoneyToUzs = function (evt) {
 
   evt.preventDefault();
 
@@ -12,11 +9,19 @@ formExchange.addEventListener('submit', function (evt) {
   var inputExchange = document.querySelector('.user-money');
   inputExchange = parseFloat(inputExchange.value.trim(), 10);
 
-  if (inputExchange > 0) {
+  if (isNaN(inputExchange)) {
+    alert('Please, enter a number!');
+    return;
+  }
+
+  if (inputExchange >= 0) {
     var resultExchange = document.querySelector('.result-money');
     resultExchange.textContent = parseFloat((currencyChoice * inputExchange).toFixed(2), 10);
   } else {
-    alert('Something went wrong');
+    alert('Please, enter a positive number!');
   }
 
-});
+};
+
+
+formExchange.addEventListener('submit', convertMoneyToUzs);
