@@ -14,7 +14,7 @@ formExchange.addEventListener('submit', function (evt) {
 
   if (inputExchange > 0) {
     var resultExchange = document.querySelector('.result-money');
-    resultExchange.textContent = parseFloat((currencyChoice * inputExchange).toFixed(2));
+    resultExchange.textContent = parseFloat((currencyChoice * inputExchange).toFixed(2), 10);
   } else {
     alert('Something went wrong');
   }
