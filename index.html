@@ -19,7 +19,7 @@
     </header>
     <main>
       <form class="form-exchange col-8 mx-auto row" action="https://echo.htmlacademy.ru/" method="GET">
-        <div class="form-group row col-12">
+        <div class="form-group row col-12 mb-4">
           <label class="d-block w-100 " for="user_money">Your money:</label>
           <input class="user-money form-control col-md-9" type="text" step="any" id="user_money" name="user_money"
             placeholder="Enter money" min="0" aria-label="Enter money" required>
@@ -31,7 +31,9 @@
             <option value="1540.64">CNY</option>
           </select>
         </div>
-        <button class="form__btn btn btn-danger mb-4" type="submit">Convert</button>
+        <div class="form-group col-12 row">
+          <button class="form__btn btn btn-danger mb-4 col-12  py-2" type="submit">Convert</button>
+        </div>
         <div class="form-group col-12 row">
           <div class="alert alert-danger col-12 d-flex">
             <span class="mr-2">Result:</span>
